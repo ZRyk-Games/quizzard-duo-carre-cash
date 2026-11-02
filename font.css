@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Comic";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic.ttf");
+}
+@font-face {
+  font-family: "Comic-Bold";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic\ Bold.ttf");
+}
+@font-face {
+  font-family: "Comic-Bold-Oblique";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic\ Bold\ Oblique.ttf");
+}
+@font-face {
+  font-family: "Comic-Oblique";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic\ Oblique.ttf");
+}
+@font-face {
+  font-family: "Comic-Shaded";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic\ Shaded.ttf");
+}
+@font-face {
+  font-family: "Comic-Shaded-Oblique";
+  src: url("sf_slapstick_comic/SF\ Slapstick\ Comic\ Shaded\ Oblique.ttf");
+}

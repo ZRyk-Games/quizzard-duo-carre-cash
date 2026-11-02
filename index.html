@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Quizzard</title>
+  </head>
+
+  <body
+    class="flex flex-col items-stretch h-screen max-h-screen overflow-y-hidden font-[Comic]"
+  >
+    <h1 class="text-center text-4xl p-1 bg-indigo-200">Quizzard</h1>
+    <div
+      id="init"
+      class="flex flex-col w-full h-full bg-orange-100 p-2 gap-4 items-center"
+    >
+      <div class="flex flex-col w-1/3 gap-2">
+        <fieldset
+          id="settings"
+          class="border h-fit p-2 rounded-lg flex flex-col items-center justify-center gap-1"
+        >
+          <legend>Paramètres</legend>
+          <div class="flex gap-2 items-center">
+            <label for="nbPlayer">Nombre de joueurs</label>
+            <input autofocus min="1" id="nbPlayer" class="w-12" type="number" />
+          </div>
+        </fieldset>
+        <button
+          id="valider"
+          class="hover:bg-green-200 w-fit mx-auto h-fit p-2 rounded-lg cursor-pointer"
+        >
+          Démarrer la partie
+        </button>
+      </div>
+    </div>
+
+    <div id="game" class="flex w-full h-full bg-orange-100 p-2 gap-4 hidden">
+      <nav
+        class="flex flex-col h-full gap-4 p-2 rounded-lg w-[calc(20%-4rem)] bg-indigo-100"
+        id="themes"
+      ></nav>
+      <div
+        id="grid"
+        class="grid grid-cols-10 content-start gap-2 w-[60%] p-2 rounded-lg bg-sky-200"
+      ></div>
+      <div
+        id="player"
+        class="flex w-[calc(20%+4rem)] p-2 rounded-lg bg-red-200"
+      ></div>
+    </div>
+    <script type="module" src="scripts/quiz/quiz.init.js"></script>
+    <link rel="stylesheet" href="font.css" />
+  </body>
+</html>
+<style type="text/tailwindcss">
+  input {
+    @apply border rounded px-1 outline-none;
+  }
+
+  .theme {
+    @apply flex py-2 w-full rounded-lg bg-indigo-300 hover:bg-orange-900 hover:text-white cursor-pointer text-center items-center justify-center;
+  }
+
+  .case {
+    @apply flex aspect-square w-full rounded-lg items-center justify-center p-2 font-semibold text-2xl;
+  }
+
+  .options {
+    @apply flex items-center gap-2;
+  }
+</style>
